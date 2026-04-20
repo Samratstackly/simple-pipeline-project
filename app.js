@@ -1,5 +1,9 @@
-function add(a,b){
-return a+b;
-}
+const http=require('http');
 
-module.exports=add;
+const port=process.env.PORT || 8080;
+
+const server=http.createServer((req,res)=>{
+res.end("Hello from AWS!");
+});
+
+server.listen(port);
