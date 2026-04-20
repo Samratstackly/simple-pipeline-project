@@ -1,9 +1,14 @@
-const http=require('http');
+const express = require('express');
+const PORT = process.env.PORT || 8080;
 
-const port=process.env.PORT || 8080;
-
-const server=http.createServer((req,res)=>{
-res.end("Hello from AWS!");
+app.get('/', (req, res) => {
+    res.send('Hello from AWS Elastic Beanstalk!');
 });
 
-server.listen(port);
+app.get('/health', (req, res) => {
+    res.send('App is running');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

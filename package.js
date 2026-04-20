@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "main": "app.js",
+    "start": "node app.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
